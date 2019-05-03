@@ -6,7 +6,3 @@ export function listTasks () {
             return response.data;
           })
 }
-
-listTasks().then(function(response){
-  console.log(response);
-});

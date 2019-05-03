@@ -1,5 +1,7 @@
 import Vue from 'vue';
 
+const Api = require('./api');
+
 document.addEventListener("DOMContentLoaded", () => {
 
 
@@ -28,12 +30,7 @@ document.addEventListener("DOMContentLoaded", () => {
               }
     },
     data: {
-      tasks: [
-        { id: 1, name: 'Todo1', description: 'This is a todo', completed: false },
-        { id: 2, name: 'Todo 2', description: 'This is another todo', completed: true },
-        { id: 3, name: 'Three', description: 'This is a complete todo', completed: true },
-        { id: 4, name: 'Four', description: 'This is another complete todo', completed: true }
-      ],
+      tasks: [],
       task: {},
       message: '',
       action: 'create'
@@ -51,6 +48,11 @@ document.addEventListener("DOMContentLoaded", () => {
       }
     },
     methods: {
+      listTasks: function() {
+        Api.listTasks().then(function(response) {
+          app.tasks = response;
+        })
+      },
       clear: function(){
         this.task = {};
         this.action = 'create';
@@ -117,6 +119,7 @@ document.addEventListener("DOMContentLoaded", () => {
           this.message = `Task ${id} deleted.`
         }
       }
-    }
+    },
+    beforeMount() { this.listTasks() }
   })
 });
