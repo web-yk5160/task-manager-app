@@ -2,11 +2,11 @@
   "name": "task-manager-app",
   "private": true,
   "dependencies": {
-    "@rails/webpacker": "^4.0.2",
-    "axios": "^0.18.0",
-    "vue": "^2.6.10"
+    "@rails/webpacker": "^4.2.2",
+    "axios": "^0.19.1",
+    "vue": "^2.6.11"
   },
   "devDependencies": {
-    "webpack-dev-server": "^3.3.1"
+    "webpack-dev-server": "^3.10.1"
   }
 }
