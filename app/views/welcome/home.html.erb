@@ -1,7 +1,7 @@
 <div id="app" class="pushable">
        <div class="ui sidebar inverted vertical menu visible fixed left">
          <div class="ui logo item">
-           <b><i class="icon tasks purple"></i>Task Manager</b>
+           <b><i class="icon tasks purple"></i>タスクマネージャー</b>
          </div>
          <div class="item">
            <div class="ui message green">
@@ -38,11 +38,11 @@
              <div id="editor" class="details ui raise segment purple">
                <div class="ui header grid">
                   <div class="left floated nine wide column">
-                    <i class="icon edit violet"></i>Details
+                    <i class="icon edit violet"></i>詳細
                   </div>
                   <div class="right floated five wide column ">
                     <button class="ui green button right float" v-on:click="clear">
-                      <i class="icon plus circle"></i>New
+                      <i class="icon plus circle"></i>新規
                     </button>
                   </div>
                </div>
@@ -53,17 +53,17 @@
                    <input type="hidden" name="id" v-model="task.id" />
 
                    <div class="field">
-                     <label>Name</label>
-                     <input type="text" name="name" placeholder="name" required="true" v-model="task.name" />
+                     <label>タスク名</label>
+                     <input type="text" name="name" placeholder="タスク名" required="true" v-model="task.name" />
                    </div>
 
                    <div class="field">
-                     <label>description</label>
-                     <input type="text" name="description" placeholder="description" required="true" v-model="task.description" />
+                     <label>内容</label>
+                     <input type="text" name="description" placeholder="内容" required="true" v-model="task.description" />
                    </div>
 
                    <div class="field inline">
-                     <label>Completed</label>
+                     <label>完了タスク</label>
                      <input type="checkbox" name="comoleted" v-model="task.completed" />
                    </div>
 
